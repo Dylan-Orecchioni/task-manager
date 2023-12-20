@@ -1,6 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .login{
     display: flex;
     align-items: center;
     gap: 10px;
     color: #f1f1f1;
 }
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 500px;
+    background-color: #f1f1f1;
+}
+
+.form_input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 10px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.form_input input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
