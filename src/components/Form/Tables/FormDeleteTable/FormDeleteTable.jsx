@@ -1,7 +1,7 @@
 // FormDeleteTable.jsx
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import './FormDeleteForm.css';
+import './FormDeleteTable.css';
 
 // eslint-disable-next-line react/prop-types
 const FormDeleteTable = ({ tables, setTables }) => {

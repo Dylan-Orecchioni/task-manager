@@ -1,0 +1,7 @@
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
