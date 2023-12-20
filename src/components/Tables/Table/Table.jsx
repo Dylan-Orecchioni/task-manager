@@ -13,6 +13,7 @@ const Table = ({ title, tasks, table }) => {
         <div className="card-body">
           {/* eslint-disable-next-line react/prop-types */}
           {tasks.map((task) => {
+            // eslint-disable-next-line react/prop-types
               if(task.tableId === table.id){
                 return <Task key={task.id} task={task} />
           }}
