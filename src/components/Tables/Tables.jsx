@@ -51,7 +51,10 @@ const addTask = (newTask) => {
 
   return (
       <>
-        <Link to={"/" } className="btn btn-primary" element={<HomePage/>}>Page d'accueil</Link>
+        <div className="menu">
+          <Link to={"/" } className="btn btn-primary" element={<HomePage/>}>Page d'accueil</Link>
+        </div>
+
         <div className="formAddTable">
           <FormAddTable addTable={addTable}/>
           <FormDeleteTable tables={tables} setTables={setTables}/>
