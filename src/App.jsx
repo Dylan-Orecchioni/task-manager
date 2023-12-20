@@ -11,13 +11,9 @@ function App() {
         <div className="app">
           <Routes>
             <Route path={"/"} element={<HomePage/>} />
+            <Route path={"/tables"} element={<Tables/>} />
             <Route path={"/login"} element={<Login/>} />
-            <Route path={"/tasklist"} element={<Tables/>} />
           </Routes>
-
-          <div className="card-container">
-            <Tables />
-          </div>
         </div>
       </>
   );
