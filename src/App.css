@@ -1,0 +1,14 @@
+.app {
+    background-image: url("./assets/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}

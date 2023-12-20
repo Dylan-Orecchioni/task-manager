@@ -1,0 +1,31 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 300px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h1 {
+    font-weight: bold;
+}
+
+.card-container {
+    display: flex;
+    gap: 10px;
+}
+
+.formAddTable {
+    display: flex;
+    gap: 20px;
+}
