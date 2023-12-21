@@ -48,6 +48,9 @@ const addTask = (newTask) => {
   setTasks([...tasks, newTask]);
 }
 
+const handleDeleteTask = (taskId) => {
+  setTasks(tasks.filter((task) => task.id !== taskId));
+}
 
   return (
       <>
@@ -63,7 +66,7 @@ const addTask = (newTask) => {
 
         <div className="card-container">
           {tables.map((table, index) => (
-              <Table key={index} title={table.title} tasks={tasks} table={table}/>
+              <Table key={index} title={table.title} tasks={tasks} table={table} onDeleteTask={handleDeleteTask}/>
           ))}
         </div>
       </>

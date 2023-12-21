@@ -1,7 +1,17 @@
 .task-header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     background-color: white;
     padding: 10px;
     border-radius: 5px;
+    gap: 10px;
+}
+
+.task-header button {
+    border-radius: 5px;
+    padding: 5px;
+    /*border: solid white 1px;*/
+    background-color: indianred;
+    color: white;
 }
