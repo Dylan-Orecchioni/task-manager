@@ -1,4 +1,5 @@
 import './Tables.css'
+// eslint-disable-next-line no-unused-vars
 import React, {useState} from "react";
 import Table from "./Table/Table.jsx";
 import FormAddTable from "../Form/Tables/FormAddTable/FormAddTable.jsx";
@@ -48,27 +49,39 @@ const Tables = () => {
     setTables([...tables, newTable]);
   }
 
-const addTask = (newTask) => {
-  setTasks([...tasks, newTask]);
-}
+  const addTask = (newTask) => {
+    setTasks([...tasks, newTask]);
+  }
 
-const handleDeleteTask = (taskId) => {
-  setTasks(tasks.filter((task) => task.id !== taskId));
-}
+  const handleDeleteTask = (taskId) => {
+    setTasks(tasks.filter((task) => task.id !== taskId));
+  }
 
-const displayFormAddTable = () => {
-  setFormTableVisible(!formTableVisible);
-}
-const displayFormDeleteTable = () => {
-  setFormDeleteTableVisible(!formDeleteTableVisible);
-}
-const displayFormAddTask = () => {
-  setFormAddTaskVisible(!formAddTaskVisible);
-}
+  const displayFormAddTable = () => {
+    setFormTableVisible(!formTableVisible);
+  }
+  const displayFormDeleteTable = () => {
+    setFormDeleteTableVisible(!formDeleteTableVisible);
+  }
+  const displayFormAddTask = () => {
+    setFormAddTaskVisible(!formAddTaskVisible);
+  }
+
+  const handleTaskDrop = (draggedTask, targetTableId) => {
+    setTasks((prevTasks) => {
+      return prevTasks.map((task) => {
+        if (task.id === draggedTask.id) {
+          return { ...task, tableId: targetTableId };
+        }
+        return task;
+      });
+    });
+  }
 
   return (
       <>
         <div className="menu">
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <Link to={"/" } className="btn btn-primary" element={<HomePage/>}>Page d'accueil</Link>
         </div>
 
@@ -80,7 +93,7 @@ const displayFormAddTask = () => {
 
         <div className="card-container">
           {tables.map((table, index) => (
-              <Table key={index} title={table.title} tasks={tasks} table={table} onDeleteTask={handleDeleteTask}/>
+              <Table key={index} title={table.title} tasks={tasks} table={table} onDeleteTask={handleDeleteTask} onTaskDrop={handleTaskDrop}/>
           ))}
         </div>
       </>
