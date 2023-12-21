@@ -37,7 +37,7 @@ const Login = () => {
             <Link to={"/tables" } className="btn btn-primary" element={<Tables/>}>Tableaux</Link>
           </div>
 
-        <div className="container">
+        <div className="container-login">
           <form className="form_login" onSubmit={(e) => e.preventDefault()}>
             <div className="form_input">
               <label className="my-3" htmlFor="pseudo">Nom</label>
